@@ -20,12 +20,12 @@ const AddPostCard = ({ setPosts, setToggle, setEditPost, editPost }) => {
         return prev.map((val) => {
           return val.id === editPost.id
             ? { ...val, ...data }
-            : val;
+            : val;  
         });
       });
       setEditPost(null);
     }else{
-       setUsers((prev) => [...prev, { ...data, id: nanoid() }]);
+       setPosts((prev) => [...prev, { ...data, id: nanoid() }]);
     }
     reset()
     setToggle(false)
@@ -58,7 +58,7 @@ const AddPostCard = ({ setPosts, setToggle, setEditPost, editPost }) => {
         <button  
         className="bg-blue-500 hover:bg-blue-700 active:scale-95 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" 
         type="submit" disabled={!isValid}>
-          Create Post
+          {editPost ? "Update Post" : "Create Post"}
           </button>
       </form>
     </div>
