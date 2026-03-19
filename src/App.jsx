@@ -19,7 +19,7 @@ const App = () => {
   };
   return (
     <div className='w-screen min-h-screen h-screen'>
-      <NavBar />
+      <NavBar toggle={toggle} setToggle={setToggle} />
       {toggle ? ( 
         <AddPostForm 
         setPosts={setPosts} 
