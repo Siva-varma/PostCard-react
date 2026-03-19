@@ -1,6 +1,6 @@
 import React from 'react'
 
-const NavBar = () => {
+const NavBar = ({ setToggle, toggle }) => {
   return (
     <div>
         <nav className='bg-gray-400 backdrop-blur-md text-black px-8 h-[10vh] flex justify-between items-center'>
